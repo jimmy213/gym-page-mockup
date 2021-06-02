@@ -1,0 +1,46 @@
+@use './fonts' as f;
+@use './respond' as *;
+
+header {
+    padding: 47px 0 20px 0;
+    @include respond(lg) {
+        padding-bottom: 61px;
+    }
+
+    .head {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(lg) {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        nav {
+            margin-top: 28px;
+            
+            a {
+                margin-right: 26px;
+                text-decoration: none;
+                color: black;
+                font-family: f.$roboto;
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: -0.09px;
+                line-height: 29px;
+                &:hover {
+                    color: black;
+                }
+                @include respond(lg) {
+                    margin-right: 0;
+                    margin-left: 76px;
+                }
+            }
+            @include respond(lg) {
+                margin-top: 0;
+                text-align: right;
+            }
+        }
+    }
+    
+}

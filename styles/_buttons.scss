@@ -1,0 +1,125 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './respond' as *;
+
+
+@mixin sec_btn ($bg-color) {
+    padding: 0;
+    font-family: f.$open;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .3px;
+    line-height: 74px;
+    color: white;
+    background: $bg-color;
+    border: none;
+    border-radius: 10px;
+    width: 301px;
+    height: 72px;
+    
+    @include respond(lg) {
+        height: 92px;
+        font-size: 20px;
+        letter-spacing: .4px;
+        line-height: 98px;
+    }
+}
+
+@mixin sec2_btn ($bg-color) {
+    padding: 0;
+    font-family: f.$open;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: -0.11px;
+    line-height: 18px;
+    color: white;
+    background: $bg-color;
+    border: none;
+    width: 111px;
+    height: 31px;
+}
+
+@mixin sec3_btn ($bg-color) {
+    padding: 0;
+    font-family: f.$open;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: .4px;
+    line-height: 78px;
+    color: white;
+    background: $bg-color;
+    border: none;
+    border-radius: 10px;
+    width: 243px;
+    height: 74px;
+}
+
+@mixin sec4_btn ($bg-color) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    background: $bg-color;
+    border: none;
+    color: white;
+    font-family: f.$nunito;
+    font-size: 25px;
+    line-height: 10px;
+    text-align: left;
+    padding: 0;
+    padding-left: 84px;
+
+    @include respond(lg) {
+        height: 134px;
+        padding-left: 112px;
+    }
+}
+
+@mixin sec6_btn ($bg-color) {
+    padding: 0;
+    font-family: f.$nunito;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    color: white;
+    background: $bg-color;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 63px;
+
+    @include respond(lg) {
+        width: 566px;
+    }
+}
+
+@mixin sec7_btn ($bg-color) {
+    button {
+        border: 1px solid $bg-color;
+        border-radius: 2px;
+        background: white;
+        width: 100%;
+        height: 63px;
+        font-family: f.$nunito;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        color: $bg2-black;
+        opacity: .8;
+        margin-bottom: 24px;
+        padding: 0;
+    }
+}
+
+@mixin social_btn ($bg-color) {
+    a {
+        width: 29px;
+        height: 29px;
+        background: $bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+}

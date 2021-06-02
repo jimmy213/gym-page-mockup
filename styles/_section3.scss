@@ -1,0 +1,123 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './buttons' as btn;
+@use './respond' as *;
+
+.sec3 {
+    padding: 28px 0 47px;
+
+    @include respond(lg) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding-bottom: 111px;
+    }
+
+    @include respond(xl) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .content {
+        .top {
+            width: 318px;
+            margin: 0 auto;
+            h2 {
+                font-family: f.$roboto;
+                font-weight: bold;
+                font-size: 15px;
+                letter-spacing: 6px;
+                line-height: 25px;
+                color: $cu-orange;
+                margin-bottom: 13px;
+
+                @include respond(lg) {
+                    margin-bottom: 18px;
+                }
+            }
+            h1 {
+                font-family: f.$roboto;
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 25px;
+                color: $text-black;
+                margin-bottom: 21px;
+
+                @include respond(lg) {
+                    font-size: 40px;
+                }
+            }
+            hr {
+                border: 2px solid $cu-cyan;
+                opacity: 1;
+                width: 168px;
+            }
+
+            @include respond(lg) {
+                margin-top: 128px;
+                width: 100%;
+            }
+        }
+
+        .par {
+            margin: 59px auto 0;
+            font-family: f.$open;
+            width: 318px;
+    
+            h3 {
+                font-size: 20px;
+                line-height: 35px;
+                color: $cu-orange;
+                margin-bottom: 35px;
+
+                @include respond(lg) {
+                    line-height: 45px;
+                }
+            }
+            p {
+                font-size: 20px;
+                line-height: 35px;
+                color: $text-grey;
+
+                @include respond(lg) {
+                    line-height: 45px;
+                }
+            }
+
+            @include respond(lg) {
+                margin: 59px 0 0;
+            }
+
+            @include respond(xl) {
+                width: 670px;
+                margin: 59px 0 0;
+            }
+        }
+    }
+    .sec3-img {
+        margin-top: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: 40px;
+            width: 317px;
+        }
+    }
+    .sec3-btn {
+        text-align: center;
+        button {
+            @include btn.sec3_btn($cu-cyan);
+        }
+
+        @include respond(lg) {
+            text-align: left;
+            margin-top: 94px;
+        }
+    }
+
+    .sec3-img-dsk {
+        margin-bottom: 54px;
+    }
+}

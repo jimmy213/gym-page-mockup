@@ -1,0 +1,102 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './buttons' as btn;
+@use './respond' as *;
+
+.sec6 {
+    background: $bg2-black;
+    text-align: center;
+    color: white;
+    padding: 39px 0 107px;
+
+    @include respond(lg) {
+        padding: 42px 0 49px;
+    }
+
+    .prop {
+        width: 318px;
+
+        @include respond(lg) {
+            width: 1196px;
+        }
+
+        h1 {
+            font-family: f.$roboto;
+            font-size: 45px;
+            font-weight: 500;
+
+            @include respond(lg) {
+                font-size: 60px;
+            }
+        }
+        hr {
+            margin: auto;
+            margin-top: 21px;
+            border: 2px solid $cu-cyan;
+            opacity: 1;
+            width: 111px;
+
+            @include respond(lg) {
+                margin-top: 18px;
+                width: 128px;
+            }
+        }
+        form {
+            height: auto;
+            margin: 70px auto 0;
+            font-family: f.$open;
+            display: grid;
+            justify-content: center;
+            
+            .inp {
+                display: grid;
+                justify-content: center;
+                row-gap: 19px;
+                input {
+                    width: 318px;
+                    padding: 18px 25px;
+                    height: 63px;
+                    border: 1px solid $cu-cyan;
+                    border-radius: 2px;
+                    opacity: 1;
+                    background: $bg2-black;
+                    color: white;
+                }
+
+                @include respond(lg) {
+                    row-gap: 30px;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 16px;
+                }
+                
+                @include respond(xl) {
+                    input {
+                        width: 590px;
+                    }
+                }
+            }
+            textarea {
+                margin-top: 19px;
+                width: 318px;
+                padding: 18px 25px;
+                height: 139px;
+                border: 1px solid $cu-cyan;
+                border-radius: 2px;
+                opacity: 1;
+                background: $bg2-black;
+                color: white;
+
+                @include respond(lg) {
+                    margin-top: 30px;
+                    width: 100%
+                }
+            }
+        }
+        
+        button {
+            @include btn.sec6_btn($cu-cyan);
+            margin-top: 49px;
+        }
+    }
+
+}

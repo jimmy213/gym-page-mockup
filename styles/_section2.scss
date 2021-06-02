@@ -1,0 +1,42 @@
+@use './variables' as *;
+@use './sec2Card' as sec2;
+@use './respond' as *;
+
+.sec2 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    text-align: center;
+    margin: 23px auto;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(lg) {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+        margin: 89px auto 105px;
+    }
+
+    .classic {
+        position: relative;
+        margin: 0 auto;
+        .cont {
+            @include sec2.card($cu-orange);
+        }
+    }
+    .standard {
+        position: relative;
+        margin: 0 auto;
+        .cont {
+            @include sec2.card($cu-purple);
+        }
+    }
+    .premium {
+        position: relative;
+        margin: 0 auto;
+        .cont {
+            @include sec2.card($cu-cyan);
+        }
+    }
+}

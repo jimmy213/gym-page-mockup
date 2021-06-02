@@ -1,0 +1,122 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './buttons' as btn;
+@use './respond' as *;
+
+
+.sec {
+    position: relative;
+
+    .slider {
+        position: relative;
+        .sl1 {
+            padding: 49px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background: url('../assets/mobile/Mask\ Group\ 13.png') no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 438px;
+
+            @include respond(md) {
+                background: url('../assets/desktop/Group\ 143.png') no-repeat;
+                background-size: cover;
+            }
+            
+            @include respond(lg) {
+                padding-top: 216px;
+                padding-left: 252px;
+                height: 731px;
+                justify-content: start;
+            }
+            
+            .sl {
+                position: absolute;
+    
+                .sl-content {
+                    color: white;
+                    font-family: f.$open;
+        
+                    h2 {
+                        font-size: 20px;
+                        letter-spacing: .4px;
+                        opacity: .75;
+                        margin-bottom: 15px;
+                    }
+                    h1 {
+                        font-size: 25px;
+                        line-height: 45px;
+                        margin-bottom: 103px;
+                    }
+                    
+                    .sec-btn {
+                        text-align: center;
+                        button {
+                            @include btn.sec_btn($cu-cyan);
+                        }
+                        @include respond(lg) {
+                            text-align: left;
+                        }
+                    }
+
+                    @include respond(lg) {
+                        h2 {
+                            font-size: 30px;
+                            letter-spacing: .6px;
+                            opacity: .75;
+                            margin-bottom: 5px;
+                        }
+                        h1 {
+                            font-size: 60px;
+                            line-height: 90px;
+                            margin-bottom: 72px;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    .main-arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 51px;
+        padding-right: 46px;
+        
+        .main-left {
+            background: none;
+            border: none;
+            height: 64px;
+            font-size: 64px;
+            color: $arrow-cyan;
+        }
+        .main-right {
+            @extend .main-left;
+        }
+    }
+    .bullets {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include respond(lg) {
+            bottom: 20px;
+        }
+
+        button {
+            width: 49px;
+            height: 5px;
+            border: none;
+            margin-right: 15px;
+        }
+    }
+}

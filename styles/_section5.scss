@@ -1,0 +1,125 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './respond' as *;
+
+.sec5 {
+    padding: 44px 0 70px;
+    text-align: center;
+
+    @include respond(lg) {
+        padding: 93px 0 116px;
+    }
+
+    h1 {
+        font-family: f.$roboto;
+        font-size: 45px;
+        font-weight: 500;
+        color: $text-black;
+
+        @include respond(lg) {
+            font-size: 60px;
+        }
+    }
+    hr {
+        margin: auto;
+        margin-top: 21px;
+        border: 2px solid $cu-cyan;
+        opacity: 1;
+        width: 111px;
+
+        @include respond(lg) {
+            margin-top: 22px;
+            width: 128px;
+        }
+    }
+    p {
+        margin: 70px auto 0;
+        width: 318px;
+        font-family: f.$open;
+        font-size: 20px;
+        line-height: 45px;
+        color: $text-black;
+        opacity: .8;
+
+        @include respond(lg) {
+            margin: 53px auto 0;
+            width: 100%;
+            max-width: 1107px;
+        }
+    }
+
+    .sec5-slider {
+        position: relative;
+        margin-top: 62px;
+
+        .sec5-slides {
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            
+            .sec5-sl1 {
+                text-align: center;
+
+                img {
+                    margin: 0 auto;
+                }
+                
+                button {
+                    width: 460px;
+                    height: 127px;
+                    margin-bottom: 10px;
+                    border: none;
+                    background: white;
+                    box-shadow: 0px 3px 6px #00000029;
+                    opacity: 1;
+                    font-family: f.$roboto;
+                    font-weight: 500;
+                    font-size: 25px;
+                    color: $text-black;
+                    opacity: .8;
+                }
+                @include respond(xl) {
+                    text-align: right;
+
+                    img {
+                        margin: 0;
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            .sec5-sl2 {
+                @extend .sec5-sl1;
+
+                
+                @include respond(xl) {
+                    text-align: left;
+                    
+                    img {
+                        margin-left: 34px;
+                    }
+                    button {
+                        margin-left: 34px;
+                    }
+                }
+            }
+        }
+        .sec5-arrows {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .sec5-left {
+                cursor: pointer;
+            }
+
+            .sec5-right {
+                @extend .sec5-left;
+            }
+        }
+    }
+
+}

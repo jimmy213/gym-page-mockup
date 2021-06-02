@@ -1,0 +1,60 @@
+@use './variables' as *;
+@use './fonts' as f;
+@use './buttons' as btn;
+@use './respond' as *;
+
+.sec7 {
+    width: 318px;
+    text-align: center;
+    padding: 42px 0 87px;
+
+    @include respond(lg) {
+        padding: 107px 0 142px;
+        width: 1196px;
+    }
+
+    h1 {
+        font-family: f.$roboto;
+        font-size: 45px;
+        font-weight: 500;
+        color: $text-black;
+
+        @include respond(lg) {
+            font-size: 60px;
+        }
+    }
+    hr {
+        margin: auto;
+        margin-top: 21px;
+        border: 2px solid $cu-cyan;
+        opacity: 1;
+        width: 111px;
+
+        @include respond(lg) {
+            margin-top: 14px;
+            width: 128px;
+        }
+    }
+    .btns {
+        margin-top: 57px;
+        @include btn.sec7_btn ($cu-cyan);
+
+        @include respond(lg) {
+            margin-top: 99px;
+        }
+
+        p {
+            text-align: left;
+            margin: 37px auto 79px;
+            font-family: f.$open;
+            font-size: 20px;
+            line-height: 45px;
+            color: $text-black;
+            opacity: .8;
+
+            @include respond(xl) {
+                width: 1107px;
+            }
+        }
+    }
+}
